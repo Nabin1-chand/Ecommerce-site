@@ -1,32 +1,54 @@
-import React from 'react'
-import { AppBar,Toolbar,Typography,styled,InputBase} from '@mui/material'
-const NavBar = () => {
-  const StyledToolbar = styled(Toolbar)({
-    display:"flex",
-    justifyContent:"space-between",
-    backgroundColor:'blue'
-   });
-  const Search = styled("div")({
-    background:'white',
-    padding:"0 10px",
-    width:"50%"
-  });
- 
-    
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Dropdown from 'react-bootstrap/Dropdown';
+import CardList from './CardList';
+
+function NavBar() {
   return (
     <>
-         <AppBar position="static"  sx={{boxShadow:'none', backgroundColor:'white'}}>
-        <StyledToolbar>
-        <Typography variant="h6" sx={{display:{xs:"none", sm:"block" }}}>Home</Typography>
-         <Typography variant="h6" sx={{display:{xs:"none", sm:"block"}}}>About</Typography>
-         <Typography variant="h6" sx={{display:{xs:"none", sm:"block"}}}>Contact Us</Typography>
-         <Search><InputBase placeholder="Search...."/></Search>
-        </StyledToolbar>
-     
-         
-         </AppBar>
+    <Navbar bg="light" expand="lg">
+      <Container fluid>
+      
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >
+            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="#action2">About</Nav.Link>
+            <Nav.Link href="#action2">Contact Us</Nav.Link>
+            <Nav.Link href="#action2">Login</Nav.Link>
+            <Nav.Link href="#action2">Register</Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search Items"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+      </Container>
+    </Navbar>
+
+    <Dropdown>
+      <Dropdown.Toggle variant="outline" id="dropdown-basic">
+        Categories
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+    <CardList/>
     </>
-  )
+  );
 }
 
-export default NavBar
+export default NavBar;
