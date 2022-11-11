@@ -4,14 +4,13 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Dropdown from 'react-bootstrap/Dropdown';
-import CardList from './CardList';
+
 
 function NavBar() {
   return (
     <>
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light"  expand="lg" className="navbar sticky-top navbar-expand-lg">
       <Container fluid>
-      
           <Nav
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
@@ -35,7 +34,7 @@ function NavBar() {
       </Container>
     </Navbar>
 
-    <Dropdown>
+    <Dropdown position="fixed">
       <Dropdown.Toggle variant="outline" id="dropdown-basic">
         Categories
       </Dropdown.Toggle>
@@ -46,7 +45,7 @@ function NavBar() {
         <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
-    <CardList/>
+   
     </>
   );
 }
