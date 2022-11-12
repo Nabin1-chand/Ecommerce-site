@@ -18,9 +18,9 @@ const fetchData = async()=>{
   return (
     <>
                 {data.map((data)=>{
-                  const{id,title, description,images,rating} = data
+                  const{id,title, description,images,rating,price,discountPercentage} = data
                   return(
-                      <CardList title ={title} description ={description} images={images[0]} rating={rating} style={{display:'inline-block'}}/>
+                      <CardList key={id} title ={title} description ={description} images={images[0]} rating={rating} price={price}  discountPercentage ={discountPercentage} style={{display:'inline-block'}}/>
                   )
                 })}
       

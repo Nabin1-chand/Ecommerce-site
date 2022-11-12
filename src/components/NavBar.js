@@ -40,9 +40,14 @@ function NavBar() {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Dropdown.Item href="#/action-1">smartphones</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">laptops</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">fragrances</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">skincare</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">groceries</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">home-decoration</Dropdown.Item>
+        
+
       </Dropdown.Menu>
     </Dropdown>
    
