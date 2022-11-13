@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import CardList from '../CardList'
 
-const Data = () => {
+const Data = (props) => {
 const [data, setData] = useState([])
-const url = 'https://dummyjson.com/products'
+// const url = 'https://dummyjson.com/products'
 const fetchData = async()=>{
+  const url = `https://dummyjson.com/products?category=${props.category}`;
     const res = await fetch (url)
     const json = await res.json()
     console.log(json)
@@ -14,7 +15,7 @@ const fetchData = async()=>{
 
     useEffect(()=>{
       fetchData();
-    },[])
+    },[data])
   return (
     <>
                 {data.map((data)=>{

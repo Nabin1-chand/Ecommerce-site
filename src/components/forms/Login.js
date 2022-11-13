@@ -1,5 +1,5 @@
 import React from 'react'
-import CssBaseline from '@mui/material/CssBaseline';
+
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container'
@@ -11,13 +11,13 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import { Copyright } from '@mui/icons-material';
+
 const Login = () => {
   return (
     <> 
 
     <Container component="main" maxWidth="xs">
-        <CssBaseline />
+        {/* <CssBaseline /> */}
         <Box
           sx={{
             marginTop: 8,
@@ -30,7 +30,7 @@ const Login = () => {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Log In
           </Typography>
           <Box component="form"  noValidate sx={{ mt: 1 }}>
             <TextField
@@ -79,7 +79,7 @@ const Login = () => {
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }}  />
+        
       </Container>
     </>
   

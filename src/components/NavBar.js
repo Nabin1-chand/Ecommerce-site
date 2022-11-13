@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Dropdown from 'react-bootstrap/Dropdown';
+import { Link } from 'react-router-dom';
 
 
 function NavBar() {
@@ -16,11 +16,11 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link>Home</Nav.Link>
             <Nav.Link href="#action2">About</Nav.Link>
-            <Nav.Link href="#action2">Contact Us</Nav.Link>
-            <Nav.Link href="#action2">Login</Nav.Link>
-            <Nav.Link href="#action2">Register</Nav.Link>
+            <Nav.Link href="#action2"><Link to="login">Login</Link></Nav.Link>
+          
+            <Nav.Link href="#action2"><Link to="register">Register</Link></Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -34,23 +34,7 @@ function NavBar() {
       </Container>
     </Navbar>
 
-    <Dropdown position="fixed">
-      <Dropdown.Toggle variant="outline" id="dropdown-basic">
-        Categories
-      </Dropdown.Toggle>
-
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">smartphones</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">laptops</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">fragrances</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">skincare</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">groceries</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">home-decoration</Dropdown.Item>
-        
-
-      </Dropdown.Menu>
-    </Dropdown>
-   
+    
     </>
   );
 }
