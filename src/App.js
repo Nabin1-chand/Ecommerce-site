@@ -1,18 +1,20 @@
-import Data from "./components/api/Data";
-// import Login from "./components/forms/Login";
-// import Register from "./components/forms/Register";
-// import NavBar from "./components/NavBar";
-import Main from "./components/Main"
-
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import Login from './components/forms/Login';
+import NavBar from './components/items/NavBar';
+import Register from './components/forms/Register';
+import Data from './components/api/Data'
 function App() {
 
   return (
     <div className="App">
-       {/* <NavBar/>
-       <Data/> */}
-       {/* <Login/> */}
-       {/* <Register/> */}
-       <Main/>
+        <BrowserRouter>
+         <NavBar/>
+            <Routes>
+            <Route path ="/login" element={<Login/>}/>
+            <Route path ="/register" element ={<Register/>}/>
+            <Route path ="/" element ={<Data/>}/>
+            </Routes>
+        </BrowserRouter>
     </div>
   );
 }

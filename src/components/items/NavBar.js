@@ -1,3 +1,4 @@
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -7,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 function NavBar() {
+  
   return (
     <>
     <Navbar bg="light"  expand="lg" className="navbar sticky-top navbar-expand-lg">
@@ -16,7 +18,7 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link>Home</Nav.Link>
+            <Nav.Link><Link to ="./">Home</Link></Nav.Link>
             <Nav.Link href="#action2">About</Nav.Link>
             <Nav.Link href="#action2"><Link to="login">Login</Link></Nav.Link>
           
@@ -28,6 +30,7 @@ function NavBar() {
               placeholder="Search Items"
               className="me-2"
               aria-label="Search"
+            
             />
             <Button variant="outline-success">Search</Button>
           </Form>
